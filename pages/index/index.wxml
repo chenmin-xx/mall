@@ -1,13 +1,65 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view class="index">
+    <!-- 搜索框 -->
+    <SeachIput></SeachIput>
+    <!-- 轮播图 -->
+    <view class="index_swiper">
+        <swiper autoplay="true" indicator-dots="true" circular="true" interval="3000">
+            <swiper-item
+            wx:for="{{swiperList}}"
+            wx:key="goods_id"
+            >
+                <navigator url="" open-type="navigate">
+                    <image src="{{item.image_src}}" mode="widthFix">
+                        
+                    </image>
+                </navigator>
+                  
+            </swiper-item>
+              
+        </swiper>
+    </view>
+    <!-- 分类导航 -->
+    <view class="index_cate">
+        <navigator
+        wx:for="{{catesList}}"
+        wx:key="name"
+        src="{{item.navigate_url}}"
+        open-type="navigate"
+        >
+            <image src="{{item.image_src}}" mode="widthFix">
+                
+            </image>
+        </navigator>
+          
+    </view>
+    <!-- 楼层 -->
+    <view class="index_floor">
+        <view class="floor_group"
+        wx:for="{{floorList}}"
+        wx:for-item="groupItem"
+        wx:for-index="groupIndex"
+        wx:key="groupIndex">
+            <!-- 标题 -->
+            <view class="floor_title">
+                <image src="{{groupItem.floor_title.image_src}}" mode="widthFix">
+                </image>
+            </view>
+            
+            <!-- 内容 -->
+            <view class="floor_list">
+                <navigator
+                wx:for="{{groupItem.product_list}}"
+                wx:key="name"
+                class="" target="" url="" open-type="navigate">
+                    <!-- {{item}} -->
+                    <image src="{{item.image_src}}" mode="{{index === 0 ? 'widthFix':'scaleToFill'}}">
+                        
+                    </image>
+                </navigator>
+                  
+            </view>
+
+        </view>
+    </view>
+      
 </view>

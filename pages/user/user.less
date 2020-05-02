@@ -1,0 +1,75 @@
+page{
+  background-color: #edece8;
+}
+.uesr_info_wrap {
+    height: 45vh;
+    overflow: hidden;
+    background-color:var(--themeColor);
+    position: relative;
+    .user_img_wrap {
+        position: relative;
+        height: 50vh;
+      .user_bg {
+        width: 120%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        filter: blur(20rpx);
+      }
+      .uesr_info{
+          position: absolute;
+          top: 30%;
+          left: 50%;
+          transform: translate(-50%);
+          text-align: center;
+          .user_icon{
+              width: 150rpx;
+              height: 150rpx;
+              border-radius: 50%;
+          }
+          .user_name{
+              color: #fff;
+              margin-top: 40rpx;
+              font-size: 40rpx;
+          }
+      }
+    }
+    .login_btn{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+
+  .user_contet{
+    position: relative;
+    .user_main{
+      width: 90%;
+      position: absolute;
+      left: 50%;
+      top: -40rpx;
+      transform: translate(-50%);
+      .history_warp{
+        background-color: #fff;
+        display: flex;
+        border-radius: 10rpx;
+        navigator{
+          flex: 1;
+          text-align: center;
+          padding: 15rpx 0;
+          height: 140rpx;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .his_num{
+            color: var(--themeColor);
+          }
+          .his_title{
+            margin-top: 10rpx;
+          }
+        }
+      }
+    }
+  }

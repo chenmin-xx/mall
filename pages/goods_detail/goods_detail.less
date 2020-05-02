@@ -1,0 +1,105 @@
+page{
+    padding-bottom: 98rpx;
+}
+.detail_swiper{
+    swiper{
+        height: 60vw;
+        text-align: center;
+        image{
+            width: 70%;
+        }
+    }
+    .goods_price{
+        margin-top: 20rpx;
+        padding: 15rpx;
+        font-size: 36rpx;
+        font-weight: 600;
+        color: var(--themeColor);
+    }
+    .goods_name_row{
+        display: flex;
+        padding: 10rpx 0;
+        // border-top: 8px solid #dedede;
+        border-bottom: 8px solid #dedede;
+        .goods_name{
+            flex: 5;
+            color: #666;
+            font-size: 30rpx;
+            padding: 8rpx 20rpx;
+
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+        .goods_collect{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-left: 1px solid #000;
+            text{
+
+            }
+            .collect_text{
+
+            }
+        }
+    }
+    .goods_info{
+        .goods_info_title{
+            font-size: 32rpx;
+            font-weight: 600;
+            color: var(--themeColor);
+            padding: 20rpx;
+        }
+    }
+    .btm_tool{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 98rpx;
+        background-color: #fff;
+        display: flex;
+        border-top: 1px solid #ccc;
+        .tool_item{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content:  center;
+            align-items: center;
+            font-size: 24rpx;
+            position: relative;
+            button{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+        }
+        .btn_cart{
+            flex: 2;
+            display: flex;
+            justify-content:  center;
+            align-items: center;
+            background-color: #ffa500;
+            font-size: 30rpx;
+            font-weight: 600;
+            color: #fff;
+        }
+        .btn_buy{
+            flex: 2;
+            display: flex;
+            justify-content:  center;
+            align-items: center;
+            background-color: #eb4500;
+            font-size: 30rpx;
+            font-weight: 600;
+            color: #fff;
+        }
+    }
+}
